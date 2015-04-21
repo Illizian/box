@@ -171,6 +171,9 @@ class GuzzleHttpAdapter implements HttpInterface {
         {
             case 404:
                 throw new NotFoundException();
+                break;
+            default:
+                throw $exception;
         }
     }
 
